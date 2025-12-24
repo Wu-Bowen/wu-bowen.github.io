@@ -6,7 +6,7 @@ import theme from './styles/Theme';
 
 const App = () => {
     return (
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
             <StyledEngineProvider injectFirst>
                 <ThemeProvider theme={theme}>
                     <Website />

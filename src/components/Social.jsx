@@ -1,55 +1,55 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Box } from '@mui/material';
 import configs from '../config';
 import Side from './Side';
 import Icon from './Icons/Icons';
-import makeStyles from '@mui/styles/makeStyles';
-
-const useStyles = makeStyles((theme) => ({
-    socialContainer: {
-        flexDirection: 'column',
-        alignItems: 'center',
-        margin: '0',
-        padding: '0',
-        listStyle: 'none',
-        '&::after': {
-            content: '""',
-            display: 'block',
-            width: '1px',
-            height: '80px',
-            margin: '0 auto',
-            backgroundColor: theme.palette.secondary.main,
-        },
-    },
-    list: {
-        width: '20px',
-        paddingLeft: '10px',
-        marginBottom: '10px',
-        '& svg': {
-            color: theme.palette.secondary.main,
-        },
-        '&:last-of-type': {
-            marginBottom: '40px',
-        },
-        '&:hover, &:focus': {
-            transform: 'translateY(-3px)',
-            '& svg': {
-                color: theme.palette.primary.textColor,
-            },
-        },
-    },
-}));
 
 const Social = ({ isHome }) => {
-    const classes = useStyles();
     return (
         <Side isHome={isHome} orientation="left">
-            <div className={classes.socialContainer}>
+            <Box
+                component="ul"
+                sx={(theme) => ({
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    margin: '0',
+                    padding: '0',
+                    listStyle: 'none',
+                    '&::after': {
+                        content: '""',
+                        display: 'block',
+                        width: '1px',
+                        height: '80px',
+                        margin: '0 auto',
+                        backgroundColor: theme.palette.secondary.main,
+                    },
+                })}
+            >
                 {configs.socialMedia &&
                     configs.socialMedia.map(({ url, name }, i) => (
-                        <li className={classes.list} key={i}>
+                        <Box
+                            component="li"
+                            key={i}
+                            sx={(theme) => ({
+                                width: '20px',
+                                paddingLeft: '10px',
+                                marginBottom: '10px',
+                                '& svg': {
+                                    color: theme.palette.secondary.main,
+                                },
+                                '&:last-of-type': {
+                                    marginBottom: '40px',
+                                },
+                                '&:hover, &:focus': {
+                                    transform: 'translateY(-3px)',
+                                    '& svg': {
+                                        color: theme.palette.primary.textColor,
+                                    },
+                                },
+                            })}
+                        >
                             <a
-                                className={classes.svg}
                                 href={url}
                                 aria-label={name}
                                 target="_blank"
@@ -57,9 +57,9 @@ const Social = ({ isHome }) => {
                             >
                                 <Icon name={name} />
                             </a>
-                        </li>
+                        </Box>
                     ))}
-            </div>
+            </Box>
         </Side>
     );
 };
