@@ -1,7 +1,78 @@
+import React from 'react';
 import NLP_PAPER from './Twitter_Sentiment_Analysis.pdf';
 import CO2_PAPER from './CO2.pdf';
 const projectData = {
     projects: [
+        {
+            name: 'Spotilytics',
+            description: (
+                <p>
+                    A web app for visualizing personalized Spotify analytics.
+                    View recently played songs, top artists, tracks, genres, and
+                    in-depth overview on your music choice. Also, discover new
+                    artists and songs based on personal preferences.
+                </p>
+            ),
+            stack: ['JavaScript', 'React', 'Node', 'MongoDB', 'Express'],
+            external: '',
+            github: 'https://github.com/Wu-Bowen/spring-2020-gifted-hammer',
+        },
+        {
+            name: 'Project Neo',
+            description: (
+                <p>
+                    A survival base-building and management game built in Unity.
+                    Players must manage character and NPC conditions while
+                    dealing with internal and external conflicts. Repository is
+                    currently private until release.
+                </p>
+            ),
+            stack: ['C#', 'Unity', 'Photoshop', 'ShaderLab'],
+            external: '',
+            github: 'https://github.com/Wu-Bowen/Project-Neo',
+        },
+        {
+            name: 'Client Websites',
+            description: (
+                <p>
+                    Collection of personal websites built for various clients.
+                    Features include responsive design, modern UI/UX, and
+                    optimized performance. View examples:{' '}
+                    <a
+                        onClick={(e) => e.stopPropagation()}
+                        href="https://xiao-hannah.github.io/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        aria-label="Hannah's Website"
+                    >
+                        Hannah Xiao
+                    </a>
+                    ,{' '}
+                    <a
+                        onClick={(e) => e.stopPropagation()}
+                        href="https://lakepartners.netlify.app/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        aria-label="Lake Partners"
+                    >
+                        Lake Partners
+                    </a>
+                    ,{' '}
+                    <a
+                        onClick={(e) => e.stopPropagation()}
+                        href="https://perplexityapm.netlify.app/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        aria-label="Perplexity APM"
+                    >
+                        Perplexity APM
+                    </a>
+                </p>
+            ),
+            stack: ['JavaScript', 'React', 'CSS', 'Netlify', 'GitHub Pages'],
+            external: 'https://xiao-hannah.github.io/',
+            github: '',
+        },
         {
             name: 'Lyricification',
             description: (
@@ -10,7 +81,7 @@ const projectData = {
                     Why do so few songs in Spotify have lyrics? Automatically
                     generate the lyrics when choosing your music with this app
                     (built-in music player as well). Built using Spotify API and
-                    Lyric Finder API [Deprecated because new Spotify lyrics 😠]
+                    Lyric Finder API (Deprecated because new Spotify lyrics 😠)
                 </p>
             ),
             stack: ['JavaScript', 'React', 'Bootstrap', 'Express'],
@@ -22,19 +93,7 @@ const projectData = {
             description: (
                 <p>
                     You're already here! This is the third iteration of my
-                    personal website. Credits for design go to Brittany Chiang.
-                    Click{' '}
-                    <a
-                        onClick={(e) => e.stopPropagation()}
-                        href="https://github.com/bchiang7/v4"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        aria-label="GithubLink"
-                    >
-                        {' '}
-                        here
-                    </a>{' '}
-                    to visit her GitHub
+                    personal website.
                 </p>
             ),
             stack: ['JavaScript', 'React', 'CSS', 'MaterialUI'],

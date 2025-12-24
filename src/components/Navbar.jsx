@@ -85,10 +85,6 @@ const useStyles = makeStyles((theme) => ({
 const Navbar = ({ isHome }) => {
     const matches = useMediaQuery('(min-width:768px)');
     const classes = useStyles();
-    const activeStyle = {
-        color: '#77ddaa',
-        border: '1px dashed #77ddaa',
-    };
     const location = useLocation();
     const [color, setColor] = useState('none');
     const [isMounted, setIsMounted] = useState(!isHome);
@@ -207,9 +203,6 @@ const Navbar = ({ isHome }) => {
                                                         <Link
                                                             smooth
                                                             to={url}
-                                                            activeStyle={
-                                                                activeStyle
-                                                            }
                                                             className={
                                                                 classes.link
                                                             }
@@ -220,6 +213,8 @@ const Navbar = ({ isHome }) => {
                                                                           100
                                                                         : 0
                                                                 }ms`,
+                                                                color: location.hash === url ? '#77ddaa' : undefined,
+                                                                border: location.hash === url ? '1px dashed #77ddaa' : undefined,
                                                             }}
                                                         >
                                                             <span

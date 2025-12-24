@@ -1,3 +1,5 @@
+import React from 'react';
+
 const jobData = {
     companies: [
         {
@@ -8,9 +10,9 @@ const jobData = {
             location: 'Redmond, WA',
             range: 'December 2021 - present',
             roleDescription: [
-                'Led end-to-end development on AI Copilot for Logic Apps, an interactive chatbot to assist workflow creation',
-                'Transitioned overburdened Azure Logic App service to a new designer application, reducing load time by over 70%',
-                'Improved UX interfaces by using modern React and Redux practices',
+                <>Led end-to-end development on the <a href="https://learn.microsoft.com/en-us/azure/logic-apps/workflow-assistant-standard" target="_blank" rel="noopener noreferrer" style={{color: '#77ddaa', textDecoration: 'none', borderBottom: '1px solid #77ddaa'}}>Workflow Assistant</a>, an AI-powered chatbot to assist workflow creation</>,
+                <>Built <a href="https://learn.microsoft.com/en-us/azure/logic-apps/create-autonomous-agent-workflows?tabs=standard" target="_blank" rel="noopener noreferrer" style={{color: '#77ddaa', textDecoration: 'none', borderBottom: '1px solid #77ddaa'}}>agentic capabilities</a> including autonomous agent workflows to enable intelligent automation</>,
+                <>Transitioned overburdened Azure Logic App service to a <a href="https://github.com/Azure/LogicAppsUX" target="_blank" rel="noopener noreferrer" style={{color: '#77ddaa', textDecoration: 'none', borderBottom: '1px solid #77ddaa'}}>new open source designer</a> application, reducing load time by over 70%</>,
                 'Built a dependent service by multiple partner teams to provide a seamless experience for users',
                 'Mentored multiple interns and new-hires on Logic Apps Projects: Unit Testing Workflows and Copilot',
             ],
