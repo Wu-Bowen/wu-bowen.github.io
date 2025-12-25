@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 // https://vite.dev/config/
 export default defineConfig({
     plugins: [react()],
-    base: './', // Critical for GitHub Pages with relative paths
+    base: '/', // For user GitHub Pages site (wu-bowen.github.io)
     build: {
         outDir: 'build', // Match gh-pages expectation
         sourcemap: true,

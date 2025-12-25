@@ -6,7 +6,7 @@ import theme from './styles/Theme';
 
 const App = () => {
     return (
-        <BrowserRouter basename={import.meta.env.BASE_URL}>
+        <BrowserRouter>
             <StyledEngineProvider injectFirst>
                 <ThemeProvider theme={theme}>
                     <Website />
